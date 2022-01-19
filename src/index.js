@@ -1,37 +1,15 @@
 import React from 'react'
 import reactDom from 'react-dom'
 
-
+import { books } from './books'
+import { Book } from './book'
 //CSS
 import './index.css'
 
-//setup vars
-const books = [
 
-  {
-    id: 1,
-    img: 'https://m.media-amazon.com/images/I/81l3rZK4lnL._AC_UY327_FMwebp_QL65_.jpg',
-    title: "Ikigai: The Japanese secret to a long and happy life",
-    author: "Héctor García"
-  },
-  {
-    id: 2,
-    img: 'https://images-eu.ssl-images-amazon.com/images/I/51GCJ4sNgpL._SY264_BO1,204,203,200_QL40_FMwebp_.jpg',
-    title: "Grandparents' Bag of Stories",
-    author: "Sudha Murty "
-  },
-  {
-    id: 3,
-    img: 'https://images-na.ssl-images-amazon.com/images/I/51u8ZRDCVoL._SX330_BO1,204,203,200_.jpg',
-    title: "Rich Dad Poor Dad",
-    author: "Robert T. Kiyosaki"
-  }
-];
 
-// const names = ["mayank", "raj", "hari"]
-// const newNames = names.map((name) => {
-//   return <h1>{name}</h1>
-// })
+//error during npm run bouild
+const MiniCssExtractPlugin = require("mini-css-extract-plugin").default;
 
 function BookList() {
   return (
@@ -50,20 +28,7 @@ function BookList() {
 
 
 
-const Book = (props) => {
-  const { img, author, title } = props;
-  // console.log(props)
-  return (
-    <article className='book'>
-      <img
-        src={img}
-        alt="book img"
-      />
-      <h1>{title} </h1>
-      <h3 >{author} </h3>
 
-    </article>);
-}
 
 // const Image = () => <img src="https://m.media-amazon.com/images/I/81l3rZK4lnL._AC_UY327_FMwebp_QL65_.jpg" alt="book img" />
 // const Title = () => <h1>Ikigai: The Japanese secret to a long and happy life </h1>
